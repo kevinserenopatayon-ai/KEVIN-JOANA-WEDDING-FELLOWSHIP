@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,63 +9,77 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Poppins:wght@300;400;500&display=swap"
+        rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
 
-    <title>Kevin & Joana</title>
+    <title>Kevin & Joana | Wedding Fellowship</title>
 </head>
 
 <body>
 
-<div class="card">
+    <main class="card">
 
-    <h3>WELCOME</h3>
+        <!-- Decorative elements -->
+        <div class="floral floral-top">❀</div>
+        <div class="floral floral-bottom">❀</div>
 
-    <h1>Kevin &amp; Joana</h1>
+        <div class="heart">♡</div>
 
-    <div class="gold-line"></div>
+        <!-- Header -->
+        <h3>WELCOME</h3>
 
-    <p class="subtitle">
-        Wedding Fellowship
-    </p>
+        <!-- Names -->
+        <h1>Kevin &amp; Joana</h1>
 
-    <p class="date">
-        January 22, 2027 @ 4:30PM
-    </p>
+        <div class="gold-line"></div>
 
-    <p class="location">
-        DON JOSE HEIGHTS CLUBHOUSE
-    </p>
+        <!-- Event -->
+        <p class="subtitle">
+            Wedding Fellowship
+        </p>
 
-    <input
-        type="text"
-        id="searchInput"
-        placeholder="Enter your full name"
-    >
+        <p class="date">
+            January 22, 2027 @ 4:30PM
+        </p>
 
-    <button onclick="findGuest()">
-        Find My Table
-    </button>
+        <p class="location">
+            DON JOSE HEIGHTS CLUBHOUSE
+        </p>
 
-    <div id="result"></div>
+        <!-- Guest Search -->
+        <section class="guest-search">
 
-</div>
+            <label for="searchInput">
+                FIND YOUR TABLE
+            </label>
 
-<script>
-function findGuest() {
-    const name = document.getElementById("searchInput").value.trim();
-    const result = document.getElementById("result");
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Enter your full name"
+                autocomplete="off"
+            >
 
-    if (!name) {
-        result.innerHTML = "Please enter your full name.";
-        return;
-    }
+            <button
+                type="button"
+                onclick="findGuest()"
+            >
+                Find My Table
+            </button>
 
-    result.innerHTML = "Searching for <strong>" + name + "</strong>...";
-}
-</script>
+        </section>
+
+        <!-- Search Result -->
+        <div id="result"></div>
+
+    </main>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
 
 </body>
-</html>
 
+</html>
