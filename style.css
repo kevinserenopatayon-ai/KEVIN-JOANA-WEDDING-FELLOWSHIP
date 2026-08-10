@@ -1,152 +1,401 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+* {
+    box-sizing: border-box;
 }
 
-body{
+body {
+    margin: 0;
+    min-height: 100vh;
 
-    background:url("background.jpg") center center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    min-height:100vh;
+    padding: 30px 15px;
 
-    display:flex;
+    /* Soft elegant wedding background */
+    background:
+        radial-gradient(circle at 10% 10%,
+            rgba(255, 255, 255, 0.95) 0,
+            rgba(255, 255, 255, 0) 28%),
 
-    justify-content:center;
+        radial-gradient(circle at 90% 90%,
+            rgba(255, 255, 255, 0.9) 0,
+            rgba(255, 255, 255, 0) 30%),
 
-    align-items:center;
+        linear-gradient(
+            135deg,
+            #eee8dc 0%,
+            #fffdf8 45%,
+            #f3ede3 100%
+        );
 
-    font-family:Poppins,sans-serif;
+    font-family: "Poppins", sans-serif;
+    color: #292929;
+
+    position: relative;
+    overflow-x: hidden;
 }
 
-.overlay{
+/* Decorative wedding glow */
+body::before,
+body::after {
+    content: "";
+    position: fixed;
+    width: 300px;
+    height: 300px;
 
-    width:100%;
-    min-height:100vh;
+    border-radius: 50%;
 
-    background:rgba(255,255,255,.55);
+    background: rgba(190, 145, 65, 0.08);
 
-    display:flex;
+    filter: blur(45px);
 
-    justify-content:center;
-
-    align-items:center;
-
+    z-index: -1;
 }
 
-.card{
-
-    width:90%;
-    max-width:500px;
-
-    background:white;
-
-    padding:45px;
-
-    border-radius:20px;
-
-    text-align:center;
-
-    box-shadow:0 20px 60px rgba(0,0,0,.15);
-
+body::before {
+    top: -120px;
+    left: -100px;
 }
 
-h1{
-
-    font-family:"Cormorant Garamond",serif;
-
-    font-size:48px;
-
-    color:#8b6b3f;
-
+body::after {
+    bottom: -120px;
+    right: -100px;
 }
 
-h3{
 
-    letter-spacing:3px;
+/* MAIN CARD */
 
-    color:#777;
+.card {
+    width: min(92vw, 620px);
 
+    min-height: 650px;
+
+    position: relative;
+
+    padding: 55px 45px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            rgba(255, 253, 248, 0.96),
+            rgba(255, 253, 248, 0.96)
+        );
+
+    border: 1px solid rgba(169, 123, 47, 0.55);
+
+    box-shadow:
+        0 20px 60px rgba(80, 60, 30, 0.15);
+
+    overflow: hidden;
 }
 
-.subtitle{
 
-    margin:20px 0 35px;
+/* Elegant double border */
 
-    color:#888;
+.card::before {
+    content: "";
 
+    position: absolute;
+
+    top: 12px;
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+
+    border: 1px solid rgba(169, 123, 47, 0.45);
+
+    pointer-events: none;
 }
 
-input{
 
-    width:100%;
+/* Corner floral decorations */
 
-    padding:15px;
+.floral {
+    position: absolute;
 
-    font-size:16px;
+    color: #9d8152;
 
-    border-radius:10px;
+    opacity: 0.35;
 
-    border:1px solid #ccc;
+    font-size: 130px;
 
-    margin-bottom:20px;
+    line-height: 1;
 
+    pointer-events: none;
 }
 
-button{
+.floral-top {
+    top: -30px;
+    left: -25px;
 
-    width:100%;
-
-    padding:15px;
-
-    border:none;
-
-    border-radius:10px;
-
-    background:#b58b53;
-
-    color:white;
-
-    font-size:17px;
-
-    cursor:pointer;
-
+    transform: rotate(-20deg);
 }
 
-button:hover{
+.floral-bottom {
+    bottom: -30px;
+    right: -25px;
 
-    background:#9c7543;
-
+    transform: rotate(160deg);
 }
 
-#result{
 
-    margin-top:35px;
+/* HEART */
 
-    font-size:18px;
+.heart {
+    font-family: "Cormorant Garamond", serif;
 
-    line-height:1.8;
+    font-size: 42px;
 
+    color: #a87927;
+
+    margin-bottom: 5px;
 }
 
-.success{
 
-    color:#3b7d42;
+/* WELCOME */
 
+h3 {
+    margin: 10px 0 15px;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 18px;
+
+    font-weight: 600;
+
+    letter-spacing: 4px;
+
+    color: #333;
 }
 
-.error{
 
-    color:red;
+/* KEVIN & JOANA */
 
+h1 {
+    margin: 0;
+
+    font-family: "Great Vibes", cursive;
+
+    font-size: clamp(65px, 12vw, 105px);
+
+    font-weight: 400;
+
+    line-height: 1.05;
+
+    color: #a67525;
+
+    text-shadow:
+        0 1px 1px rgba(120, 80, 20, 0.12);
 }
 
-.table{
 
-    font-size:34px;
+/* GOLD DIVIDER */
 
-    font-weight:bold;
+.gold-line {
+    width: 230px;
 
-    color:#b58b53;
+    height: 1px;
 
+    background: linear-gradient(
+        to right,
+        transparent,
+        #b58a43,
+        transparent
+    );
+
+    margin: 22px auto 18px;
+
+    position: relative;
+}
+
+.gold-line::after {
+    content: "◆";
+
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    background: #fffdf8;
+
+    padding: 0 10px;
+
+    color: #b58a43;
+
+    font-size: 10px;
+}
+
+
+/* WEDDING FELLOWSHIP */
+
+.subtitle {
+    margin: 0 0 30px;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 28px;
+
+    font-weight: 600;
+
+    letter-spacing: 5px;
+
+    text-transform: uppercase;
+
+    color: #252525;
+}
+
+
+/* DATE */
+
+.date {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 21px;
+
+    margin: 10px 0;
+
+    color: #333;
+
+    letter-spacing: 1px;
+}
+
+
+/* LOCATION */
+
+.location {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 17px;
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    margin: 10px 0 35px;
+
+    color: #333;
+}
+
+
+/* INPUT */
+
+input {
+    width: 100%;
+
+    padding: 16px 18px;
+
+    border: 1px solid #c5a66d;
+
+    background: rgba(255, 255, 255, 0.75);
+
+    outline: none;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 15px;
+
+    text-align: center;
+
+    color: #333;
+
+    transition: 0.3s;
+}
+
+input::placeholder {
+    color: #777;
+}
+
+input:focus {
+    border-color: #9e7228;
+
+    box-shadow:
+        0 0 0 3px rgba(174, 132, 58, 0.1);
+}
+
+
+/* BUTTON */
+
+button {
+    width: 100%;
+
+    margin-top: 14px;
+
+    padding: 16px;
+
+    border: none;
+
+    background: linear-gradient(
+        135deg,
+        #a87927,
+        #c49a55,
+        #a87927
+    );
+
+    color: white;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 19px;
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px rgba(140, 100, 35, 0.25);
+}
+
+
+/* SEARCH RESULT */
+
+#result {
+    margin-top: 25px;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 20px;
+
+    color: #333;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .card {
+        padding: 45px 25px;
+
+        min-height: 600px;
+    }
+
+    h1 {
+        font-size: 65px;
+    }
+
+    .subtitle {
+        font-size: 22px;
+
+        letter-spacing: 3px;
+    }
+
+    .date {
+        font-size: 19px;
+    }
+
+    .location {
+        font-size: 15px;
+    }
 }
