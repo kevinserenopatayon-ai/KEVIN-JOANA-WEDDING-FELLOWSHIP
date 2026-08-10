@@ -3,42 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kevin & Joana | Wedding Table Finder</title>
+
+    <!-- Wedding Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
 
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <title>Kevin & Joana</title>
 </head>
+
 <body>
 
-<div class="overlay">
+<div class="card">
 
-    <div class="card">
+    <div class="floral floral-top">❀</div>
+    <div class="floral floral-bottom">❀</div>
 
-        <h3>Welcome</h3>
+    <div class="heart">♡</div>
 
-        <h1>Kevin & Joana</h1>
+    <h3>WELCOME</h3>
 
-        <p class="subtitle">
-            Wedding Fellowship
-        </p>
+    <h1>Kevin &amp; Joana</h1>
 
-        <input
-            type="text"
-            id="searchInput"
-            placeholder="Enter your full name">
+    <div class="gold-line"></div>
 
-        <button onclick="findGuest()">
-            Find My Table
-        </button>
+    <p class="subtitle">
+        Wedding Fellowship
+    </p>
 
-        <div id="result"></div>
+    <p class="date">
+        October 22, 2026 @ 4:30PM
+    </p>
 
-    </div>
+    <p class="location">
+        DON JOSE HEIGHTS CLUBHOUSE
+    </p>
+
+    <input
+        type="text"
+        id="searchInput"
+        placeholder="Enter your full name"
+    >
+
+    <button onclick="findGuest()">
+        Find My Table
+    </button>
+
+    <div id="result"></div>
 
 </div>
 
-<script src="script.js"></script>
+<script>
+function findGuest() {
+    const name = document.getElementById("searchInput").value.trim();
+    const result = document.getElementById("result");
+
+    if (!name) {
+        result.innerHTML = "Please enter your full name.";
+        return;
+    }
+
+    result.innerHTML = "Searching for <strong>" + name + "</strong>...";
+}
+</script>
 
 </body>
 </html>
