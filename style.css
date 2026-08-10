@@ -1,5 +1,13 @@
+/* =====================================================
+   GENERAL
+===================================================== */
+
 * {
     box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -12,114 +20,135 @@ body {
 
     padding: 30px 15px;
 
-    /* Soft elegant wedding background */
-    background:
-        radial-gradient(circle at 10% 10%,
-            rgba(255, 255, 255, 0.95) 0,
-            rgba(255, 255, 255, 0) 28%),
+    font-family: "Poppins", sans-serif;
 
-        radial-gradient(circle at 90% 90%,
-            rgba(255, 255, 255, 0.9) 0,
-            rgba(255, 255, 255, 0) 30%),
+    color: #292929;
+
+    /*
+       Elegant ivory wedding background
+    */
+    background:
+        radial-gradient(
+            circle at 10% 10%,
+            rgba(255, 255, 255, 0.95),
+            transparent 28%
+        ),
+
+        radial-gradient(
+            circle at 90% 90%,
+            rgba(255, 255, 255, 0.9),
+            transparent 30%
+        ),
 
         linear-gradient(
             135deg,
-            #eee8dc 0%,
+            #eee7da 0%,
             #fffdf8 45%,
-            #f3ede3 100%
+            #f1eadd 100%
         );
-
-    font-family: "Poppins", sans-serif;
-    color: #292929;
 
     position: relative;
     overflow-x: hidden;
 }
 
-/* Decorative wedding glow */
+
+/* =====================================================
+   BACKGROUND DECORATION
+===================================================== */
+
 body::before,
 body::after {
     content: "";
+
     position: fixed;
-    width: 300px;
-    height: 300px;
+
+    width: 320px;
+    height: 320px;
 
     border-radius: 50%;
 
-    background: rgba(190, 145, 65, 0.08);
+    background: rgba(181, 138, 67, 0.08);
 
-    filter: blur(45px);
+    filter: blur(50px);
 
     z-index: -1;
+
+    pointer-events: none;
 }
 
 body::before {
-    top: -120px;
-    left: -100px;
+    top: -130px;
+    left: -120px;
 }
 
 body::after {
-    bottom: -120px;
-    right: -100px;
+    bottom: -130px;
+    right: -120px;
 }
 
 
-/* MAIN CARD */
+/* =====================================================
+   MAIN CARD
+===================================================== */
 
 .card {
-    width: min(92vw, 620px);
 
-    min-height: 650px;
+    width: min(92vw, 650px);
+
+    min-height: 700px;
 
     position: relative;
 
-    padding: 55px 45px;
+    padding: 55px 50px;
 
     text-align: center;
 
     background:
-        linear-gradient(
-            rgba(255, 253, 248, 0.96),
-            rgba(255, 253, 248, 0.96)
-        );
+        rgba(255, 253, 248, 0.96);
 
-    border: 1px solid rgba(169, 123, 47, 0.55);
+    border: 1px solid rgba(169, 123, 47, 0.65);
 
     box-shadow:
-        0 20px 60px rgba(80, 60, 30, 0.15);
+        0 25px 70px rgba(80, 60, 30, 0.16);
 
     overflow: hidden;
 }
 
 
-/* Elegant double border */
+/*
+   Inner gold border
+*/
 
 .card::before {
+
     content: "";
 
     position: absolute;
 
-    top: 12px;
-    left: 12px;
-    right: 12px;
-    bottom: 12px;
+    top: 13px;
+    left: 13px;
+    right: 13px;
+    bottom: 13px;
 
-    border: 1px solid rgba(169, 123, 47, 0.45);
+    border: 1px solid rgba(169, 123, 47, 0.48);
 
     pointer-events: none;
 }
 
 
-/* Corner floral decorations */
+/* =====================================================
+   FLORAL DECORATIONS
+===================================================== */
 
 .floral {
+
     position: absolute;
 
-    color: #9d8152;
+    color: #a4895a;
 
-    opacity: 0.35;
+    opacity: 0.25;
 
-    font-size: 130px;
+    font-size: 150px;
 
     line-height: 1;
 
@@ -127,37 +156,47 @@ body::after {
 }
 
 .floral-top {
-    top: -30px;
-    left: -25px;
+
+    top: -35px;
+    left: -35px;
 
     transform: rotate(-20deg);
 }
 
 .floral-bottom {
-    bottom: -30px;
-    right: -25px;
+
+    bottom: -35px;
+    right: -35px;
 
     transform: rotate(160deg);
 }
 
 
-/* HEART */
+/* =====================================================
+   HEART
+===================================================== */
 
 .heart {
+
     font-family: "Cormorant Garamond", serif;
 
-    font-size: 42px;
+    font-size: 45px;
+
+    line-height: 1;
 
     color: #a87927;
 
-    margin-bottom: 5px;
+    margin-bottom: 12px;
 }
 
 
-/* WELCOME */
+/* =====================================================
+   WELCOME
+===================================================== */
 
 h3 {
-    margin: 10px 0 15px;
+
+    margin: 0 0 15px;
 
     font-family: "Cormorant Garamond", serif;
 
@@ -165,20 +204,24 @@ h3 {
 
     font-weight: 600;
 
-    letter-spacing: 4px;
+    letter-spacing: 5px;
 
-    color: #333;
+    color: #303030;
 }
 
 
-/* KEVIN & JOANA */
+/* =====================================================
+   KEVIN & JOANA
+   Great Vibes = elegant wedding calligraphy
+===================================================== */
 
 h1 {
+
     margin: 0;
 
     font-family: "Great Vibes", cursive;
 
-    font-size: clamp(65px, 12vw, 105px);
+    font-size: clamp(70px, 13vw, 110px);
 
     font-weight: 400;
 
@@ -191,26 +234,36 @@ h1 {
 }
 
 
-/* GOLD DIVIDER */
+/* =====================================================
+   GOLD DIVIDER
+===================================================== */
 
 .gold-line {
-    width: 230px;
+
+    width: 250px;
 
     height: 1px;
 
-    background: linear-gradient(
-        to right,
-        transparent,
-        #b58a43,
-        transparent
-    );
+    margin: 25px auto 20px;
 
-    margin: 22px auto 18px;
+    background:
+        linear-gradient(
+            to right,
+            transparent,
+            #b58a43,
+            transparent
+        );
 
     position: relative;
 }
 
+
+/*
+   Diamond decoration
+*/
+
 .gold-line::after {
+
     content: "◆";
 
     position: absolute;
@@ -220,9 +273,9 @@ h1 {
 
     transform: translate(-50%, -50%);
 
-    background: #fffdf8;
+    padding: 0 12px;
 
-    padding: 0 10px;
+    background: #fffdf8;
 
     color: #b58a43;
 
@@ -230,14 +283,17 @@ h1 {
 }
 
 
-/* WEDDING FELLOWSHIP */
+/* =====================================================
+   WEDDING FELLOWSHIP
+===================================================== */
 
 .subtitle {
+
     margin: 0 0 30px;
 
     font-family: "Cormorant Garamond", serif;
 
-    font-size: 28px;
+    font-size: 30px;
 
     font-weight: 600;
 
@@ -249,50 +305,93 @@ h1 {
 }
 
 
-/* DATE */
+/* =====================================================
+   DATE
+===================================================== */
 
 .date {
+
+    margin: 0 0 12px;
+
     font-family: "Cormorant Garamond", serif;
 
-    font-size: 21px;
+    font-size: 23px;
 
-    margin: 10px 0;
-
-    color: #333;
+    font-weight: 500;
 
     letter-spacing: 1px;
+
+    color: #333;
 }
 
 
-/* LOCATION */
+/* =====================================================
+   LOCATION
+===================================================== */
 
 .location {
+
+    margin: 0 0 42px;
+
     font-family: "Cormorant Garamond", serif;
 
-    font-size: 17px;
+    font-size: 18px;
 
     font-weight: 600;
 
     letter-spacing: 2px;
 
-    margin: 10px 0 35px;
-
     color: #333;
 }
 
 
-/* INPUT */
+/* =====================================================
+   GUEST SEARCH
+===================================================== */
 
-input {
+.guest-search {
+
     width: 100%;
 
-    padding: 16px 18px;
+    max-width: 470px;
 
-    border: 1px solid #c5a66d;
+    margin: 0 auto;
+}
 
-    background: rgba(255, 255, 255, 0.75);
+
+.guest-search label {
+
+    display: block;
+
+    margin-bottom: 12px;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 17px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    color: #8e682b;
+}
+
+
+/* =====================================================
+   INPUT
+===================================================== */
+
+input {
+
+    width: 100%;
+
+    padding: 17px 20px;
+
+    border: 1px solid #c6a66a;
 
     outline: none;
+
+    background: rgba(255, 255, 255, 0.85);
 
     font-family: "Poppins", sans-serif;
 
@@ -302,24 +401,33 @@ input {
 
     color: #333;
 
-    transition: 0.3s;
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
 }
+
 
 input::placeholder {
-    color: #777;
+
+    color: #888;
 }
 
+
 input:focus {
+
     border-color: #9e7228;
 
     box-shadow:
-        0 0 0 3px rgba(174, 132, 58, 0.1);
+        0 0 0 3px rgba(174, 132, 58, 0.12);
 }
 
 
-/* BUTTON */
+/* =====================================================
+   BUTTON
+===================================================== */
 
 button {
+
     width: 100%;
 
     margin-top: 14px;
@@ -328,18 +436,19 @@ button {
 
     border: none;
 
-    background: linear-gradient(
-        135deg,
-        #a87927,
-        #c49a55,
-        #a87927
-    );
+    background:
+        linear-gradient(
+            135deg,
+            #9c7026,
+            #c39a55,
+            #9c7026
+        );
 
     color: white;
 
     font-family: "Cormorant Garamond", serif;
 
-    font-size: 19px;
+    font-size: 20px;
 
     font-weight: 600;
 
@@ -347,55 +456,268 @@ button {
 
     cursor: pointer;
 
-    transition: 0.3s;
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
 }
 
+
 button:hover {
+
     transform: translateY(-2px);
 
     box-shadow:
-        0 8px 20px rgba(140, 100, 35, 0.25);
+        0 9px 22px rgba(140, 100, 35, 0.25);
 }
 
 
-/* SEARCH RESULT */
+button:active {
+
+    transform: translateY(0);
+}
+
+
+/* =====================================================
+   SEARCH RESULT
+===================================================== */
 
 #result {
-    margin-top: 25px;
+
+    width: 100%;
+
+    max-width: 470px;
+
+    margin: 30px auto 0;
+
+    font-family: "Cormorant Garamond", serif;
+}
+
+
+/* =====================================================
+   SUCCESS RESULT
+===================================================== */
+
+.guest-result {
+
+    padding: 25px 20px;
+
+    border-top: 1px solid #c9aa70;
+
+    border-bottom: 1px solid #c9aa70;
+
+    background:
+        rgba(255, 250, 239, 0.7);
+
+    animation: fadeIn 0.4s ease;
+}
+
+
+.welcome {
+
+    margin: 0 0 8px;
 
     font-family: "Cormorant Garamond", serif;
 
-    font-size: 20px;
+    font-size: 17px;
 
-    color: #333;
+    font-weight: 600;
+
+    letter-spacing: 4px;
+
+    color: #9c7026;
 }
 
 
-/* MOBILE */
+.guest-name {
+
+    margin: 5px 0 18px;
+
+    font-family: "Great Vibes", cursive;
+
+    font-size: 48px;
+
+    color: #a67525;
+}
+
+
+.table-label {
+
+    margin: 0;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 500;
+
+    letter-spacing: 3px;
+
+    color: #777;
+}
+
+
+.table-number {
+
+    margin: 4px 0 0;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 32px;
+
+    font-weight: 700;
+
+    color: #292929;
+}
+
+
+/* =====================================================
+   NOT FOUND
+===================================================== */
+
+.not-found {
+
+    padding: 18px;
+
+    border: 1px solid rgba(180, 120, 60, 0.3);
+
+    background: rgba(255, 247, 238, 0.7);
+
+    animation: fadeIn 0.3s ease;
+}
+
+
+.not-found p {
+
+    margin: 0 0 5px;
+
+    font-size: 21px;
+
+    font-weight: 600;
+
+    color: #7e4e2b;
+}
+
+
+.not-found small {
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 12px;
+
+    color: #777;
+}
+
+
+/* =====================================================
+   LOADING
+===================================================== */
+
+.loading {
+
+    font-size: 18px;
+
+    color: #8e682b;
+
+    letter-spacing: 1px;
+}
+
+
+/* =====================================================
+   ANIMATION
+===================================================== */
+
+@keyframes fadeIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
 
 @media (max-width: 600px) {
 
-    .card {
-        padding: 45px 25px;
+    body {
+        padding: 15px;
+    }
 
-        min-height: 600px;
+    .card {
+
+        width: 100%;
+
+        min-height: 650px;
+
+        padding: 45px 25px;
     }
 
     h1 {
-        font-size: 65px;
+
+        font-size: 68px;
     }
 
     .subtitle {
-        font-size: 22px;
+
+        font-size: 23px;
 
         letter-spacing: 3px;
     }
 
     .date {
-        font-size: 19px;
+
+        font-size: 20px;
     }
 
     .location {
+
         font-size: 15px;
+
+        letter-spacing: 1.5px;
+    }
+
+    .guest-name {
+
+        font-size: 42px;
+    }
+
+    .floral {
+
+        font-size: 110px;
+    }
+}
+
+
+/* =====================================================
+   VERY SMALL PHONES
+===================================================== */
+
+@media (max-width: 380px) {
+
+    .card {
+
+        padding: 40px 18px;
+    }
+
+    h1 {
+
+        font-size: 58px;
+    }
+
+    .subtitle {
+
+        font-size: 20px;
+    }
+
+    .date {
+
+        font-size: 18px;
     }
 }
