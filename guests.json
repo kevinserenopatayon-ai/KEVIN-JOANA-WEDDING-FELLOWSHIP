@@ -9,7 +9,6 @@
   { "name": "Carmen Daez", "table": "VIP 1" },
   { "name": "Bernadette Saquing", "table": "VIP 1" },
   { "name": "Sylvia Sabile", "table": "VIP 1" },
-
   { "name": "Charo Mercado", "table": "TABLE 1" },
   { "name": "JC Saquing", "table": "TABLE 1" },
   { "name": "Japhette Isaac Saquing", "table": "TABLE 1" },
@@ -20,7 +19,6 @@
   { "name": "Leonor Sabile", "table": "TABLE 1" },
   { "name": "Ferdie Sabile", "table": "TABLE 1" },
   { "name": "Aurora Sabile", "table": "TABLE 1" },
-
   { "name": "Danny Lamego", "table": "TABLE 3" },
   { "name": "Joallyn Yu", "table": "TABLE 3" },
   { "name": "Benny Yu", "table": "TABLE 3" },
@@ -31,7 +29,6 @@
   { "name": "Victor Gonzales", "table": "TABLE 3" },
   { "name": "Lorie Gonzales", "table": "TABLE 3" },
   { "name": "Malou Uy", "table": "TABLE 3" },
-
   { "name": "Kaye Urbano", "table": "TABLE 5" },
   { "name": "Jonathan Urbano", "table": "TABLE 5" },
   { "name": "Jocelyn Mariano", "table": "TABLE 5" },
@@ -42,7 +39,6 @@
   { "name": "Christopher Boloc-Boloc", "table": "TABLE 5" },
   { "name": "Jay Elmedulan", "table": "TABLE 5" },
   { "name": "Elizabeth Choa", "table": "TABLE 5" },
-
   { "name": "Eloisa Ricafranca", "table": "TABLE 7" },
   { "name": "Charles Ricafranca", "table": "TABLE 7" },
   { "name": "Monette Gacos", "table": "TABLE 7" },
@@ -53,12 +49,10 @@
   { "name": "Laurence Ignacio", "table": "TABLE 7" },
   { "name": "Ruth Ignacio", "table": "TABLE 7" },
   { "name": "Ashley Domingo", "table": "TABLE 7" },
-
   { "name": "Rose Lumiguis", "table": "TABLE 9" },
   { "name": "Lailani Zamora", "table": "TABLE 9" },
   { "name": "Jannah Villareal", "table": "TABLE 9" },
   { "name": "Jason Aquino", "table": "TABLE 9" },
-
   { "name": "Vincent Pascual", "table": "VIP 2" },
   { "name": "Lerma Pascual", "table": "VIP 2" },
   { "name": "Donald Camaro", "table": "VIP 2" },
@@ -69,7 +63,6 @@
   { "name": "Marilyn Valdez", "table": "VIP 2" },
   { "name": "Meriam Patayon", "table": "VIP 2" },
   { "name": "Asoncion Ruanto", "table": "VIP 2" },
-
   { "name": "Naomi Ramos", "table": "TABLE 2" },
   { "name": "Shechinah Patayon", "table": "TABLE 2" },
   { "name": "Divie Patayon", "table": "TABLE 2" },
@@ -80,7 +73,6 @@
   { "name": "Lorgie Catindig", "table": "TABLE 2" },
   { "name": "Joy Catindig", "table": "TABLE 2" },
   { "name": "Elmer Bajado", "table": "TABLE 2" },
-
   { "name": "Horeb Gonzales", "table": "TABLE 4" },
   { "name": "Vincent Taguiga", "table": "TABLE 4" },
   { "name": "Angie Taguiga", "table": "TABLE 4" },
@@ -91,7 +83,6 @@
   { "name": "Jean Camaro Ibay", "table": "TABLE 4" },
   { "name": "Rebecca Ibay", "table": "TABLE 4" },
   { "name": "Christopher Boloc-Boloc", "table": "TABLE 4" },
-
   { "name": "Stephen Vilan", "table": "TABLE 6" },
   { "name": "Hazel Dorothy Vilan", "table": "TABLE 6" },
   { "name": "Mariz Elle", "table": "TABLE 6" },
@@ -102,7 +93,6 @@
   { "name": "Diana Martin", "table": "TABLE 6" },
   { "name": "Nietzchelyn Daef", "table": "TABLE 6" },
   { "name": "Niedden Daef", "table": "TABLE 6" },
-
   { "name": "Jovie Tan", "table": "TABLE 8" },
   { "name": "Clarizza Sanchez", "table": "TABLE 8" },
   { "name": "Joey Rebusora", "table": "TABLE 8" },
