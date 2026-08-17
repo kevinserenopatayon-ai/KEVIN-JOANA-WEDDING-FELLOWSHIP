@@ -219,7 +219,7 @@ async function findGuest() {
                 </p>
 
                 <p class="table-label">
-                    YOUR TABLE
+                    YOUR TABLE IS
                 </p>
 
                 <p class="table-number">
